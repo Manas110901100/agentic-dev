@@ -9,7 +9,7 @@ def add(a, b):
     return a + b
 
 
-def substract(a, b):
+def subtract(a, b):
     _check_numbers(a, b)
     return a - b
 
