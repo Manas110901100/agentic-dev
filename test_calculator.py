@@ -1,6 +1,6 @@
 import pytest
 
-from calculator import add
+from calculator import add, multiply
 
 
 def test_add_whole_numbers():
@@ -23,3 +23,21 @@ def test_add_rejects_text():
 def test_add_rejects_booleans():
     with pytest.raises(TypeError):
         add(True, 1)
+
+
+def test_multiply_whole_numbers():
+    assert multiply(3, 4) == 12
+
+
+def test_multiply_by_zero():
+    assert multiply(7, 0) == 0
+
+
+def test_multiply_rejects_text():
+    with pytest.raises(TypeError):
+        multiply("3", 4)
+
+
+def test_multiply_rejects_booleans():
+    with pytest.raises(TypeError):
+        multiply(True, 4)

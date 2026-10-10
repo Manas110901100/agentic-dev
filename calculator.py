@@ -3,3 +3,10 @@ def add(a, b):
         if isinstance(value, bool) or not isinstance(value, (int, float)):
             raise TypeError("Both inputs must be numbers")
     return a + b
+
+
+def multiply(a, b):
+    for value in (a, b):
+        if isinstance(value, bool) or not isinstance(value, (int, float)):
+            raise TypeError("Both inputs must be numbers")
+    return a * b
