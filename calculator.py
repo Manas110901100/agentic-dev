@@ -9,7 +9,7 @@ def add(a, b):
     return a + b
 
 
-def substract(a, b):
+def subtract(a, b):
     _check_numbers(a, b)
     return a - b
 
@@ -24,3 +24,8 @@ def divide(a, b):
 def multiply(a, b):
     _check_numbers(a, b)
     return a * b
+
+
+def power(a, b):
+    _check_numbers(a, b)
+    return a**b
