@@ -1,6 +1,6 @@
 import pytest
 
-from calculator import add, multiply
+from calculator import add, divide, multiply, substract
 
 
 def test_add_whole_numbers():
@@ -41,3 +41,36 @@ def test_multiply_rejects_text():
 def test_multiply_rejects_booleans():
     with pytest.raises(TypeError):
         multiply(True, 4)
+
+
+def test_divide_whole_numbers():
+    assert divide(10, 2) == 5
+
+
+def test_divide_by_zero():
+    with pytest.raises(ValueError):
+        divide(10, 0)
+
+
+def test_divide_rejects_text():
+    with pytest.raises(TypeError):
+        divide("10", 2)
+
+
+def test_divide_rejects_booleans():
+    with pytest.raises(TypeError):
+        divide(True, 2)
+
+
+def test_substract_whole_numbers():
+    assert substract(10, 4) == 6
+
+
+def test_substract_rejects_text():
+    with pytest.raises(TypeError):
+        substract("10", 4)
+
+
+def test_substract_rejects_booleans():
+    with pytest.raises(TypeError):
+        substract(True, 4)
