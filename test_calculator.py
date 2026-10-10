@@ -79,6 +79,7 @@ def test_subtract_rejects_booleans():
 def test_power_whole_numbers():
     assert power(2, 3) == 8
 
+
 def test_power_zero_exponent():
     assert power(5, 0) == 1
 
