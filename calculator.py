@@ -24,3 +24,7 @@ def divide(a, b):
 def multiply(a, b):
     _check_numbers(a, b)
     return a * b
+
+def power(a, b):
+    _check_numbers(a, b)
+    return a ** b

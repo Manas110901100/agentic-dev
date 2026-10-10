@@ -1,6 +1,6 @@
 import pytest
 
-from calculator import add, divide, multiply, substract
+from calculator import add, divide, multiply, power, substract
 
 
 def test_add_whole_numbers():
@@ -74,3 +74,11 @@ def test_substract_rejects_text():
 def test_substract_rejects_booleans():
     with pytest.raises(TypeError):
         substract(True, 4)
+
+
+def test_power_whole_numbers():
+    assert power(2, 3) == 8
+
+
+def test_power_zero_exponent():
+    assert power(5, 0) == 1
