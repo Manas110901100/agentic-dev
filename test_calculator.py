@@ -82,3 +82,13 @@ def test_power_whole_numbers():
 
 def test_power_zero_exponent():
     assert power(5, 0) == 1
+
+
+def test_power_rejects_text():
+    with pytest.raises(TypeError):
+        power("2", 3)
+
+
+def test_power_rejects_booleans():
+    with pytest.raises(TypeError):
+        power(True, 3)
