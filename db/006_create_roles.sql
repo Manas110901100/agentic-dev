@@ -1,0 +1,4 @@
+
+CREATE ROLE agent NOLOGIN;
+CREATE ROLE test_agent LOGIN IN ROLE agent;
+CREATE ROLE approval_ui LOGIN;
