@@ -1,5 +1,8 @@
+import inspect
+
 import pytest
 
+import calculator
 from calculator import add, divide, multiply, power, subtract
 
 
@@ -92,3 +95,12 @@ def test_power_rejects_text():
 def test_power_rejects_booleans():
     with pytest.raises(TypeError):
         power(True, 3)
+
+
+def test_every_function_has_docstring():
+    missing = [
+        name
+        for name, func in inspect.getmembers(calculator, inspect.isfunction)
+        if not inspect.getdoc(func)
+    ]
+    assert missing == []
