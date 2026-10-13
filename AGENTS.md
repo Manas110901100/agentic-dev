@@ -9,7 +9,6 @@ a human approves every important change, and every action is recorded.
 
 - `calculator.py`: the pilot app
 - `test_calculator.py`: tests for every calculator function
-- `docs/calculator.md`: one section per function (what it does, raises, tests)
 - `db/`: numbered SQL migrations for the control database
 
 ## Rules
@@ -21,8 +20,9 @@ a human approves every important change, and every action is recorded.
 3. **Never edit or delete a test to make it pass.** Fix the code instead.
 4. **One purpose per change.** One request = one branch = one PR.
    Small commits with clear messages.
-5. **Docs in the same PR as code.** If you add or change a function,
-   update `docs/calculator.md` in the same PR.
+5. **Docstrings in the same PR as code.** Every function has a docstring:
+   what it does and what it raises. Change a function, update its docstring.
+   A test enforces that every function has one.
 6. **CI must be green.** Before every commit, run:
 
 ```
